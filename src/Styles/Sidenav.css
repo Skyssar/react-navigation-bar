@@ -1,0 +1,221 @@
+/* General Styles */
+div.ml-auto{
+   margin-left: auto;
+}
+
+ul.list{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   width: 100%;
+}
+
+/* Nav Styles */
+.navContainer .content{
+   margin-left: 60px;
+   padding: 10px;
+   transition: margin-left .3s ease-in-out;
+}
+
+.navContainer.layoutFixed .content {
+   margin-left: 230px;
+   transition: margin-left .3s ease-in-out;
+}
+
+.navContainer .topbar{
+   background-color: white;
+   margin-left: 60px;
+   padding: 0 .5rem;
+   z-index: 999;
+   border-bottom: 1px solid #dee2e6;
+   display: flex;
+   flex-flow: row nowrap;
+   height: 54px;
+   transition: margin-left .3s ease-in-out;
+}
+
+.navContainer.layoutFixed .topbar{
+   margin-left: 230px;
+   transition: margin-left .3s ease-in-out;
+}
+
+.topbar .menuBtnContainer, .profileIconContainer{
+   display: flex;
+   align-items: center;
+}
+
+.menuBtn {
+   color: #1f2123;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   padding-left: 20px;
+}
+
+.dropdownMenu {
+   position: absolute;
+   padding: 0;
+   max-width: 300px;
+   min-width: 280px;
+   z-index: 1000;
+   border: 1px solid rgba(0,0,0,.15);
+   border-radius: 5px;
+   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 18%);
+   top: 55px;
+}
+
+.dropdownMenuRight{
+   right: .5rem;
+   left: auto
+}
+
+.dropdownMenu a.dropdownItem{
+   padding: .5rem 1rem;
+   white-space: nowrap;
+   text-decoration: none;
+   color: #1f2123;
+   display: block;
+}
+
+.sidenav, .sidenavClosed {
+   z-index: 999;
+   background-color: white;
+   position: fixed;
+   transition: width .3s ease-in-out;
+   height: 100vh;
+   background-color: rgba(234, 243, 234, 0.122);
+   box-shadow: 0 14px 28px rgba(2, 95, 25, 0.25), 0px 10px 10px rgba(0,0,0,.22);
+}
+
+.sidenav {
+   width: 230px;
+}
+
+.sidenavClosed {
+   width: 60px;
+}
+
+.sidenavClosed:hover{
+   width: 230px;
+}
+
+.sidenavContainer {
+   padding: 0px 0;
+   background-color: white;
+   overflow: hidden;
+}
+
+.brandLink {
+   border-bottom: 1px solid #dee2e6;
+   color: black;
+   text-decoration: none;
+   display: flex;
+   height: 54px;
+   justify-content: center;
+   align-items: center;
+}
+
+.brandText{
+   display: block;
+   color: rgba(0,0,0,.6);
+   font-size: large;
+   max-height: 30px;
+   margin-right: 10px;
+   margin-left: 0;
+   transition: margin-left .3s linear,opacity .3s ease,visibility .2s ease;
+}
+
+@-webkit-keyframes fadeIn{
+   from { opacity:0 }
+   to { opacity:1 }
+}
+@keyframes fadeIn{
+   from { opacity:0 }
+   to { opacity:1 }
+}
+@-webkit-keyframes fadeOut{
+   from { opacity:1 }
+   to { opacity:0 }
+}
+@keyframes fadeOut{
+   from { opacity:1 }
+   to { opacity:0 }
+}
+
+.brandLink > .brandLogoXS {   
+   position: absolute;
+   left: 10px;
+   max-width: 40px;
+   animation-name: fadeIn;
+   animation-duration: .3s;
+}
+
+.brandLink > .brandLogoXL {   
+   max-height: 45px;
+   animation-name: fadeOut;
+   animation-duration: .3s;
+}
+
+.sidenav .brandLink > .brandLogoXS {   
+   visibility: hidden;
+}
+
+.sidenavClosed .brandLink > .brandLogoXS {
+   position: absolute;
+   left: 10px;
+   max-width: 40px;
+}
+
+.sidenavClosed .brandLink > .brandLogoXL {
+   visibility: hidden;
+}
+
+.sidenavClosed .brandLink > .brandText {
+   visibility: hidden;
+   margin-left: -10px;
+   
+}
+
+/* SidebarNavigation Styles  */
+
+ul.sidebarMenu{
+   margin: .3em 0;
+}
+
+li.sideItem {
+   font-size: .875rem;
+}
+
+a.navLink, button.navLink, span.navLink {
+   display: flex;
+   align-items: center;
+   color: #B2BAC2;
+   text-decoration: none;
+   cursor: pointer;
+   padding: .3rem 1rem .2rem;
+   white-space: nowrap;
+}
+
+.navLink.active{
+   color: black;
+   background-color: rgba(0,0,0,.1);
+}
+
+.navLink:hover {
+   background-color: #244f7d1c;
+}
+
+.sidenav .linkText {
+   padding-left: 16px;
+   transition: margin-left .3s linear,opacity .3s ease,visibility .3s ease;
+}
+
+.sidenavClosed .linkText {
+   padding-left: 16px;
+   margin-left: -10px;
+   opacity: 0.5;
+   transition: margin-left .2s linear,opacity .2s ease,visibility .2s ease;
+   visibility: hidden;
+   /* display: none; */
+}
+
