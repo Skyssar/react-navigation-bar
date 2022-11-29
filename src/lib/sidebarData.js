@@ -13,7 +13,7 @@ export const sidebarData = [
       id: 1,
       text: "Aceleraciones",
       icon: <TravelExplore />,
-      link: "/aceleraciones",
+      submenu: true,
       children: [
          {
             link: "/aceleraciones",
@@ -38,11 +38,5 @@ export const sidebarData = [
       icon: <BarChart />,
       text: "Estadísticas",
       link: "/statistics"
-   },
-   {
-      id: 4,
-      icon: <BarChart />,
-      text: "Logs",
-      link: "/aceleraciones/logs"
    },
 ]

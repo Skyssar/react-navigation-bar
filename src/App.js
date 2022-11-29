@@ -1,20 +1,17 @@
-import './App.css';
+
 import './Styles/Sidenav.css';
 import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom';
-import SideNav from './Components/SideNav';
 import Accelerations from './Components/Pages/Accelerations';
 import AccLogs from './Components/Pages/AccLogs';
 import Home from './Components/Pages/Home';
 import Projects from './Components/Pages/Projects';
 import Statistics from './Components/Pages/Statistics';
-import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import NavigationContainer from './Components/Templates/NavigationContainer';
 
 function App() {
   return (
    <Router>
-      <NavigationContainer >
+      <NavigationContainer>
          <Switch>
             <Route path="/" element={<Home />}/>
             <Route path="/aceleraciones">
